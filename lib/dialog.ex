@@ -22,7 +22,7 @@ defmodule ElixirHomework.Dialog do
 
   defp show(result), do: IO.puts(result)
 
-  defp save_on_disk(result), do: File.write("#{@result_file}", result)
+  defp save_on_disk(result, path \\ @result_file), do: File.write(path, result)
 
   defp ask(state, type) do
     case type do
